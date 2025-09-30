@@ -9,7 +9,11 @@ module in your calculations.
 Hint:  The are of  circle is computed using the formula area = pi*r**2.  The 
 volume of a sphere is computed using the formula volume = 4/3 * pi * r**3.
 """
-
+r = input(int("What is the radius in inches?"))
+areaofcircle = 3.14 *r**2
+volumeofsphere = 4/3 * 3.14 * r **3
+print("Area of the circle =" (str(areaofcircle))
+print("Volume of the sphere = " (str(volumeofsphere))
 """
 Exercise 17:  Heat Capacity
 The amount of energy required to increase the temperature of one gram of 
