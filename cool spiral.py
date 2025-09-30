@@ -7,12 +7,12 @@ spiral.shape("arrow")
 spiral.color("blue")
 
 def draw_spiral():
-   
-    length = 5 
-    spiral.pendown()
-    spiral.left(270)
-    spiral.forward(length)
-    for i in range(200):
+   spiral.speed(450)
+   length = 5 
+   spiral.pendown()
+   spiral.left(270)
+   spiral.forward(length)
+   for i in range(200):
         spiral.right(91)
         spiral.forward(length)
         length = length + 3
