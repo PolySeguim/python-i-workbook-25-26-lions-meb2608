@@ -1,10 +1,10 @@
 import turtle 
 screen = turtle.Screen()
 screen.title("Clock Turtle")
-screen.bgcolor("lightgreen")
+screen.bgcolor("white")
 spiral= turtle.Turtle()
-spiral.shape("arrow")
-spiral.color("blue")
+spiral.shape("turtle")
+spiral.color("pink")
 
 def draw_spiral():
    spiral.speed(450)
