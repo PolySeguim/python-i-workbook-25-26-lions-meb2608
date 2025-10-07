@@ -7,12 +7,12 @@ the integer is even or odd
 def even_odd():
     
     num = int(input("Enter an integer: "))
-    if num % 2 == 0:
-        print(str(num) + " is even")
-    else:
-        print(str(num) + " is odd")
-
-    return 0 
+    if num  % 2 == 0 :
+        print("The number is even")
+    else:   
+        print("The number is odd")
+    
+  
 
 
 """
@@ -25,6 +25,14 @@ should display a message indicating that sometimes y is a vowel, and
 sometimes y is a consonant. Otherwise your program should display
 a message indicating that the letter is a consonant.
 """
+def vowel_consonant():
+    vowels = ['a','e','i','o','u', 'A','E','I','O','U']
+    letter = input("Enter a letter of the alphabet: ")
+    if(letter in vowels):
+        print("The letter is a vowel")
+    else: 
+        print("The letter is a consonant")
+
 """
 Exercise 40: Name that triangle
 A triangle can be classified based on the lengths of its sides as
@@ -37,6 +45,17 @@ user. Display a message indicating the type of triangle
 ****** CHALLENGE:
 Perform the same task as above but with angles and not sides.
 """
+def triangle_type():
+    side1 = float(input("Enter length of side 1: "))
+    side2 = float(input("Enter length of side 2: "))
+    side3 = float(input("Enter length of side 3: "))
+    if(side1 == side2 == side3):
+        print("The triangle is equilateral")
+    elif(side1 == side2 or side1 == side3 or side2 == side3):
+        print("The triangle is isosceles")
+    else:
+        print("The triangle is scalene")
+    
 """
 Exercise 55: Cell Phone Bill
 A particular cell phone plan includes 50 minutes of air time and
@@ -54,4 +73,11 @@ categories. Ensure that all of the charges are displayed using 2
 decimal points
 """
 #testing suite
-even_odd()
+#for i in range (5):
+    #vowel_consonant()
+
+#for i in range (5): 
+    #even_odd()
+
+for i in range (5): 
+    triangle_type()
