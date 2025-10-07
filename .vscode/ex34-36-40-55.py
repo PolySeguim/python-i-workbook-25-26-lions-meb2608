@@ -73,7 +73,19 @@ categories. Ensure that all of the charges are displayed using 2
 decimal points
 """
 def cell_phone_bill():
-    
+    minutes = int(input("Enter the number of minutes used: "))
+    texts = int(input("Enter the number of text messages used: "))
+    basetime = 50
+    basetexts = 50 
+    if (minutes <= basetime) and (texts <= basetexts):
+        print("Monthly bill: $15.00")
+    else:
+        additionalminutes = basetime - minutes
+        additionaltexts = basetexts - texts
+         
+        
+
+
 
 #testing suite
 #for i in range (5):
@@ -82,5 +94,6 @@ def cell_phone_bill():
 #for i in range (5): 
     #even_odd()
 
-for i in range (5): 
-    triangle_type()
+#for i in range (5): 
+    #triangle_type()
+cell_phone_bill()
