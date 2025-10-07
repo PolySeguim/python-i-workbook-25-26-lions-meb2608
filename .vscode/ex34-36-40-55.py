@@ -77,12 +77,29 @@ def cell_phone_bill():
     texts = int(input("Enter the number of text messages used: "))
     basetime = 50
     basetexts = 50 
+    basecharge = 15.00
+    tax = 0.05
+    fee911 = 0.44
+    additionalminutecharge = 0.25
+    additionaltextcharge = 0.15
+
+
+
     if (minutes <= basetime) and (texts <= basetexts):
         print("Monthly bill: $15.00")
     else:
         additionalminutes = basetime - minutes
         additionaltexts = basetexts - texts
-         
+        additionalminutescost = additionalminutes * additionalminutecharge
+        additionaltextscost = additionaltexts * additionaltextcharge
+        subtotal = basecharge + additionalminutescost + additionaltextscost + fee911 + totaltax
+        totaltax = subtotal * tax
+        totalbill = subtotal + totaltax
+        print("Your total bill is :$" + str(totalbill,2))
+
+
+
+
         
 
 
