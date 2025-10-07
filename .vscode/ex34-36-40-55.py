@@ -72,6 +72,9 @@ minute and text charges if the user incurred costs in these
 categories. Ensure that all of the charges are displayed using 2
 decimal points
 """
+def cell_phone_bill():
+    
+
 #testing suite
 #for i in range (5):
     #vowel_consonant()
