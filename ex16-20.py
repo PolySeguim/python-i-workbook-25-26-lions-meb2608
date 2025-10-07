@@ -9,7 +9,11 @@ module in your calculations.
 Hint:  The are of  circle is computed using the formula area = pi*r**2.  The 
 volume of a sphere is computed using the formula volume = 4/3 * pi * r**3.
 """
-
+r = input(int("What is the radius in inches?"))
+areaofcircle = 3.14 *r**2
+volumeofsphere = 4/3 * 3.14 * r **3
+print("Area of the circle =" (str(areaofcircle))
+print("Volume of the sphere = " (str(volumeofsphere))
 """
 Exercise 17:  Heat Capacity
 The amount of energy required to increase the temperature of one gram of 
@@ -35,6 +39,15 @@ Hint:  You will need to look up the factor for converting between Joules
 and kilowatt hours to complete the last part of this exercise.
 (25 lines)
 """
+massofwater= input(int("What is the mass of water in grams? "))
+temperaturechange = input(int("What is the temperature change in Celcius? "))
+specificheatcapacity = 4.186
+energyrequired = massofwater * specificheatcapacity * temperaturechange
+costofelectricityperkwh = 0.089
+joulesperkwhr = 3600000 
+costofheating = (energyrequired / joulesperkwhr) * costofelectricityperkwh
+print("The total amount of energy required is " + str(energyrequired) + " Joules")
+print("The cost of heating the water is $" + str(costofheating))        
 
 """
 Exercise 18:  Volume of a Cylinder
@@ -44,6 +57,11 @@ cylinder, along with its height, from the user and computes its volume.
 Display the result rounded to one decimal place.
 (15 lines)
 """
+radius = input(int("What is the radius of the cylinder in inches? "))
+height = input(int("What is the height of the cylinder in inches? "))
+cylindervolume = 3.14 *radius**2 * height
+print("The volume of the cylinder is " + str(round(cylindervolume,1)) + " cubic inches")
+
 
 """
 Exercise 19:  Free Fall
@@ -55,6 +73,11 @@ use the formula vf = (vi**2 + 2ad)**(1/2) to compute the final speed vf,
 when the initial speed, vi, acceleration, a, and distance, d, are known.
 (16 lines)
 """
+height = input(int("What is the height in meters that the object is dropped from? "))
+initialspeed = 0 
+acceleration = 9.8
+finalspeed = (initialspeed**2 + 2*acceleration*height)**(1/2)
+print("The final speed of the object when it hits the ground is " + str(finalspeed) + " m/s")
 
 
 """
@@ -79,6 +102,14 @@ To convert a temperature from Fahrenheit to Kelvin, deduct 32 from it, multiply
 by 5/9 and then add 273.15 to it.
 
 (19 lines)
+"""
+pressure = input(int("What is the pressure in Pascals? "))
+volume = input(int("What is the volume in liters? "))
+temperaturecelsius = input(int("What is the temperature in Celsius? "))
+temperaturekelvin = temperaturecelsius + 273.15
+R = 8.314
+n = (pressure * volume) / (R * temperaturekelvin)
+print("The amount of gas in moles is " + str(n) + " moles")
 """
 
 if __name__ == "__main__":
