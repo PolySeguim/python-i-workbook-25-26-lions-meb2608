@@ -9,7 +9,10 @@ research skills to determine how to convert from MPG to L/100km.
 Then create a program that reads a value from the user in American units
 and display the equivalent fuel efficiency in Canadian units.
 """
-
+#L/100km=235.215/mpg(US)
+a = (input("How many MPG? "))
+incanadian = 235.215 / float(a)
+print(str(incanadian)+ "L/100km")
 """
 Exercise 12:  Distance Between Two Points on Earth
 The surface of the Earth is curved, and teh distance between degrees
@@ -36,7 +39,18 @@ need to convert the user's input from degrees to radians before computing
 the distance with the formula discussed previously.  The math module 
 contains a function named RADIANS which converts from degrees to radians.
 """
-
+import math 
+t1 = float(input("What is the Latitude of point 1? "))
+g1 = float(input("What is the Longitude of point 1? "))
+t2 = float(input("What is the Latitude of point 2? "))
+g2 = float(input("What is the Longitude of point 2? "))
+#convert radians to degrees
+t1 = math.radians(t1)
+g1 = math.radians(g1)
+t2 = math.radians(t2)
+g2 = math.radians(g2)   
+distance = 6371.01 * math.acos((math.sin(t1) * math.sin(t2)) + (math.cos(t1) * math.cos(t2) * math.cos(g1-g2)))
+print("The distance between the two points is " + str(distance) + " km")   
 def earthDistance():
     t1 = float(input("t1: "))
     g1 = float(input("g1: "))
@@ -68,7 +82,20 @@ The two dollar coin, referred to as a toonie, was introduced 9 years later.
 It's name is derived from the combination of the number two
 and the name of the loonie.
 """
-
+cents = int(input("How many cents do you have? "))
+toonies = cents // 200
+cents %= 200
+loonies = cents // 100
+cents %= 100
+quarters = cents // 25
+cents %= 25
+dimes = cents // 10
+cents %= 10
+nickels = cents // 5
+cents %= 5
+pennies = cents // 1
+cents %= 1
+print("You have " + str(toonies) + "toonies" + "You have " + str(loonies) +"loonies" + "You have " + str(quarters) + "quarters" + "You have " + str(dimes) + "dimes" + "You have " + str(nickels) + "nickels" + "You have " + str(pennies) + "pennies")
 """
 Exercise 14:  Height Units
 Many people think about their height in feet and inches, even in some
@@ -80,7 +107,11 @@ compute and display the equivalent number of centimeters.
 *** HINT ***
 One foot is 12 inches.  One in ch is 2.54 centimeters.
 """
-
+feet= int(input("What is your height in feet? "))
+inches = int(input( "What is your height in inches? "))
+totalinches = (feet * 12) + inches
+centimeters = totalinches * 2.54
+print("Your height in centimeters is " + str(centimeters) + " cm")
 """
 Exercise 15:  Distance Units
 In this exercise, you will create a program that begins by reading
@@ -92,6 +123,10 @@ the equivalent distance in inches, yards, and miles.
 36 inches = 1 yard = 0.00056818 miles
 63360 inches = 1760 yards = 1 mile
 """
-
+feet = int(input("What is your distance in feet? "))
+inches = feet * 12
+yards = feet / 3
+miles = feet / 5280
+print("Your distance in inches is " + str(inches) + " inches" + "Your distance in yards is " + str(yards) + " yards" + "Your distance in miles is " + str(miles) + " miles")
 if __name__ == "__main__":
     print("Hello World!")
